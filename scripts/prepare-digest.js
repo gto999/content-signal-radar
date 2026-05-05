@@ -1484,6 +1484,40 @@ async function main() {
     await saveSeenSignals(seenMap, surfacedUrls);
   }
 
+  // 写 dashboard 可读的风声快照
+  try {
+    const { writeFileSync } = await import('fs');
+    const { join, dirname } = await import('path');
+    const scriptDir = dirname(decodeURIComponent(new URL(import.meta.url).pathname));
+    const dashboardSignals = {
+      generatedAt: output.generatedAt,
+      stats: output.stats,
+      signals: (output.scoredSignals || [])
+        .filter(s => s.scoring && s.scoring.total >= 0.62)
+        .map(s => ({
+          id: s.url,
+          source: s.type === 'x_tweet' ? 'x' : s.type === 'blog_post' ? 'blog' : 'podcast',
+          sourceName: s.author || s.handle || s.name || '',
+          handle: s.handle || null,
+          title: s.title || '',
+          url: s.url,
+          summary: s.summary || '',
+          score: Math.round((s.scoring.total || 0) * 100),
+          publishedAt: s.publishedAt || output.generatedAt,
+          topic: s.signalIntent || 'general',
+          needsReview: s.needsReview || false,
+          reviewNote: s.reviewNote || s.reviewReason || null,
+        })),
+    };
+    writeFileSync(
+      join(scriptDir, '..', 'dashboard-signals.json'),
+      JSON.stringify(dashboardSignals, null, 2),
+      'utf8'
+    );
+  } catch (e) {
+    // 写失败不影响主流程
+  }
+
   console.log(JSON.stringify(output, null, 2));
 }
 
