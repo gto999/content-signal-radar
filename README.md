@@ -1,48 +1,92 @@
-# Maple Signal Radar
+# Content Signal Radar
 
-A fork of follow-builders, redesigned for people who don't just want an AI news digest — they want a decision system.
+> Not a news digest. A decision system built on top of your feed.
 
-## What changed
+Built from a fork of [follow-builders](https://github.com/zarazhangrui/follow-builders), but redesigned from the ground up to answer a different set of questions.
 
-Instead of outputting a generic builder digest, this fork reframes the workflow into a signal radar for:
-- content opportunities for X
-- topic opportunities for Xiaohongshu
-- product / agent / workflow signals worth paying attention to
-- concrete next actions
+[中文文档](./README.zh-CN.md)
 
-## Core idea
+## What it does
 
-The original repo got one important thing right: central feed + local remix + scheduled delivery.
+Runs daily via GitHub Actions. Pulls signals from multiple source types, scores them, filters noise, and produces a structured signal report — ready for stdout, Telegram, dashboard integration, or repo-based archiving. It helps you decide:
 
-This fork keeps that skeleton, but changes the last mile:
-- from "what happened" to "why this matters"
-- from "summary" to "signal extraction"
-- from "digest" to "content + product decisions"
+- What should I pay attention to today?
+- What can I write about on X?
+- What can become a Xiaohongshu post?
+- What should influence my product or workflow decisions?
+- What's my concrete next action?
 
-## New config directions
+## Sources supported
 
-The config schema now supports:
-- `focusTopics`
-- `contentGoals`
-- `outputSections`
-- `scoring`
+| Type | Method |
+|------|--------|
+| X (Twitter) | RSS via nitter instances |
+| Blogs / newsletters | RSS |
+| Podcasts | RSS |
+| 即刻 (Jike) | API |
+| 公众号 (WeChat MP) | wewe-rss |
 
-These fields are meant to tune the remixing behavior around your own priorities.
+Sources are split into `config/default-sources.json` (public, version-controlled) and `config/custom-sources.json` (private, git-ignored). Add your own accounts in the custom file.
 
-## Suggested use case
+## How it works
 
-Use this if you want one recurring output that helps you answer:
-- what should I pay attention to today?
-- what can I write on X?
-- what can become a Xiaohongshu post?
-- what should influence my product thinking?
-- what should I do next?
+```
+fetch feeds
+  → deduplicate (seen-signals with daily TTL reset, Asia/Shanghai timezone)
+  → score signals (focusTopics × contentGoals × scoring config)
+  → prepare digest (platform sections: X drafts, Xiaohongshu angles, product signals)
+  → deliver via stdout / Telegram
+  → write dashboard-signals.json (for dashboard integration)
+  → commit feed state back to repo
+```
 
-## Status
+Key scripts:
+- `scripts/generate-feed.js` — fetches and deduplicates all sources
+- `scripts/prepare-digest.js` — scores, sections, and formats the report
+- `scripts/deliver.js` — pushes to Telegram
 
-This is a working first-pass fork. The feed layer is still inherited from the original project. The biggest next step is making sources more customizable and adding explicit scoring in the preparation/remix pipeline.
+## Configuration
+
+Copy `config/maple.config.example.json` → `config/maple.config.json` (git-ignored).
+
+Key fields:
+```json
+{
+  "focusTopics": ["AI agents", "creator economy", "personal brand"],
+  "contentGoals": ["X post drafts", "Xiaohongshu topics", "product signals"],
+  "outputSections": ["signals", "x-drafts", "xiaohongshu", "product"],
+  "scoring": {
+    "minScore": 3,
+    "boostKeywords": ["agent", "workflow", "creator"]
+  }
+}
+```
+
+Full schema: `config/config-schema.json`
+
+## Setup
+
+1. Fork this repo
+2. Add repository secrets used by feed generation:
+   - `X_BEARER_TOKEN`
+   - `SUPADATA_API_KEY`
+3. For local report preparation / delivery, copy `config/maple.config.example.json` to `~/.content-signal-radar/config.json`
+4. Add private sources to `~/.content-signal-radar/custom-sources.json` (see `config/custom-sources.example.json`)
+5. GitHub Actions runs automatically once daily via `.github/workflows/generate-feed.yml`
+
+Optional Telegram delivery uses `TELEGRAM_BOT_TOKEN` in `~/.content-signal-radar/.env` plus `delivery.chatId` in your local config.
+
+See `examples/sample-digest.md` for a sample output.
+
+## Output
+
+| Output | Description |
+|--------|-------------|
+| stdout / Telegram | Structured signal report, depending on delivery config |
+| `dashboard-signals.json` | Structured signal data for external integrations |
+| `output/` | Historical reports committed to the repo when enabled |
 
 ## Credits
 
-Original project: https://github.com/zarazhangrui/follow-builders
-Fork direction and adaptation: Maple-style signal radar
+Original project: [zarazhangrui/follow-builders](https://github.com/zarazhangrui/follow-builders)
+This fork: signal extraction over generic summarization, tuned for content + product decisions.
