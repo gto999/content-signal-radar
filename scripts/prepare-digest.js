@@ -1518,7 +1518,21 @@ async function main() {
     // 写失败不影响主流程
   }
 
-  console.log(JSON.stringify(output, null, 2));
+  // 将完整 JSON 写到 digest.json（供 dashboard / 调试使用），stdout 只输出可读 Markdown
+  try {
+    const { writeFileSync } = await import('fs');
+    const { join, dirname } = await import('path');
+    const scriptDir = dirname(decodeURIComponent(new URL(import.meta.url).pathname));
+    writeFileSync(join(scriptDir, '..', 'digest.json'), JSON.stringify(output, null, 2), 'utf8');
+  } catch (e) {
+    // ignore
+  }
+
+  if (process.env.DIGEST_FORMAT === 'json') {
+    console.log(JSON.stringify(output, null, 2));
+  } else {
+    console.log(output.renderedMarkdown || JSON.stringify(output, null, 2));
+  }
 }
 
 main().catch(err => {
