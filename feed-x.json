@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T11:07:06.662Z",
+  "generatedAt": "2026-06-17T11:19:36.513Z",
   "lookbackHours": 24,
   "x": [],
   "stats": {
@@ -7,6 +7,6 @@
     "totalTweets": 0
   },
   "errors": [
-    "X API: User lookup failed: HTTP 403"
+    "X API: User lookup failed: HTTP 401"
   ]
 }

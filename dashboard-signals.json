@@ -1,35 +1,137 @@
 {
-  "generatedAt": "2026-05-05T01:02:33.185Z",
+  "generatedAt": "2026-06-17T11:19:49.311Z",
   "stats": {
     "podcastEpisodes": 1,
-    "xBuilders": 35,
-    "totalTweets": 24,
-    "blogPosts": 12,
-    "highSignalCount": 1,
+    "xBuilders": 40,
+    "totalTweets": 31,
+    "blogPosts": 1,
+    "highSignalCount": 9,
     "autoResolvedCount": 3,
-    "feedGeneratedAt": "2026-05-04T08:26:33.142Z",
+    "feedGeneratedAt": "2026-06-17T08:13:23.213Z",
     "rawCounts": {
-      "x_tweet": 18,
+      "x_tweet": 26,
       "jike_post": 10,
-      "blog_post": 8,
+      "blog_post": 1,
       "podcast_episode": 1
     },
     "postSeenCounts": {
+      "x_tweet": 26,
+      "jike_post": 10,
       "blog_post": 1,
-      "x_tweet": 4
+      "podcast_episode": 1
     },
     "seenFilteredCounts": {
-      "x_tweet": 14,
-      "jike_post": 10,
-      "blog_post": 7,
-      "podcast_episode": 1
+      "x_tweet": 0,
+      "jike_post": 0,
+      "blog_post": 0,
+      "podcast_episode": 0
     },
     "demotedCounts": {
       "x_tweet": 3
     },
     "highSignalCounts": {
-      "blog_post": 1
+      "x_tweet": 7,
+      "jike_post": 2
     }
   },
-  "signals": []
+  "signals": [
+    {
+      "id": "https://x.com/zarazhangrui/status/2066936706281206165",
+      "source": "x",
+      "sourceName": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "title": "Every other product right now is \"an AI agent that does everything in your work & life & ...",
+      "url": "https://x.com/zarazhangrui/status/2066936706281206165",
+      "summary": "Every other product right now is \"an AI agent that does everything in your work & life & integrates with everything.\" Cool, that's just Claude/Codex. If you want me to use your thing instead, it needs an opinion & a sou...",
+      "score": 105,
+      "publishedAt": "2026-06-16T17:31:27.000Z",
+      "topic": "both",
+      "needsReview": false,
+      "reviewNote": null
+    },
+    {
+      "id": "https://x.com/rauchg/status/2067106499449565265",
+      "source": "x",
+      "sourceName": "Guillermo Rauch",
+      "handle": "rauchg",
+      "title": "It’s time to ship",
+      "url": "https://x.com/rauchg/status/2067106499449565265",
+      "summary": "It’s time to ship",
+      "score": 72,
+      "publishedAt": "2026-06-17T04:46:09.000Z",
+      "topic": "product_signal",
+      "needsReview": false,
+      "reviewNote": "高互动信号，关键词未命中但互动强 — 按互动判断保留"
+    },
+    {
+      "id": "https://x.com/joshwoodward/status/2067025851829330076",
+      "source": "x",
+      "sourceName": "Josh Woodward",
+      "handle": "joshwoodward",
+      "title": "🇧🇷World-changing AI companies are coming from Brazil. That’s why we’ve officially expan...",
+      "url": "https://x.com/joshwoodward/status/2067025851829330076",
+      "summary": "🇧🇷World-changing AI companies are coming from Brazil. That’s why we’ve officially expanded our Google AI Futures Fund to Brazil, partnering with venture capital leader Monashees to launch the Gama Fund. We’re looking ...",
+      "score": 67,
+      "publishedAt": "2026-06-16T23:25:41.000Z",
+      "topic": "both",
+      "needsReview": false,
+      "reviewNote": "高互动信号，关键词未命中但互动强 — 按互动判断保留"
+    },
+    {
+      "id": "https://x.com/zarazhangrui/status/2066994434953421226",
+      "source": "x",
+      "sourceName": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "title": "You don’t have to chase the cool thing. Do whatever you’re already doing so well that it ...",
+      "url": "https://x.com/zarazhangrui/status/2066994434953421226",
+      "summary": "You don’t have to chase the cool thing. Do whatever you’re already doing so well that it becomes the cool thing. The cool thing is rarely cool when it starts. It becomes cool because someone went deep on something every...",
+      "score": 67,
+      "publishedAt": "2026-06-16T21:20:50.000Z",
+      "topic": "neither",
+      "needsReview": false,
+      "reviewNote": null
+    },
+    {
+      "id": "https://m.okjike.com/originalPosts/6a30bb5b8694679c362225b2",
+      "source": "podcast",
+      "sourceName": "歸藏",
+      "handle": "歸藏",
+      "title": "发布了: Anthropic 叫停了关于 Agent SDK 六月以后不能使用 Claude 订阅额度的这个改动 就是说你还是可以在类似 CodePilot 这种基于 Agent SDK 开发的其他 Claud...",
+      "url": "https://m.okjike.com/originalPosts/6a30bb5b8694679c362225b2",
+      "summary": "Anthropic 叫停了关于 Agent SDK  六月以后不能使用 Claude 订阅额度的这个改动&lt;br&gt;&lt;br&gt;就是说你还是可以在类似 CodePilot 这种基于 Agent SDK 开发的其他 Claude Code 三方客户端上，使用你的 Claude 订阅额度。&lt;br&gt;&lt;br&gt;用不完的朋友们可以继续爽了&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;img src=&quot;https://cdnv2.ruguoapp.com/FhL9yewzqOhOAeahhpY9...",
+      "score": 65,
+      "publishedAt": "Tue, 16 Jun 2026 02:56:27 GMT",
+      "topic": "product_signal",
+      "needsReview": false,
+      "reviewNote": null
+    },
+    {
+      "id": "https://m.okjike.com/originalPosts/6a2f7c14aa39df5104cb7fae",
+      "source": "podcast",
+      "sourceName": "李继刚",
+      "handle": "李继刚",
+      "title": "发布了: 1. 模型很喜欢说「想象一下」 2. 现在很多Agent都支持多模态能力 可以加一条规则： 「每当你输出“想象一下”时，直接生成配图，并在图中标注信息，方便...",
+      "url": "https://m.okjike.com/originalPosts/6a2f7c14aa39df5104cb7fae",
+      "summary": "1. 模型很喜欢说「想象一下」&lt;br&gt;2. 现在很多Agent都支持多模态能力&lt;br&gt;&lt;br&gt;可以加一条规则：&lt;br&gt;&lt;br&gt;「每当你输出“想象一下”时，直接生成配图，并在图中标注信息，方便直观呈现你想要表达的画面」。",
+      "score": 64,
+      "publishedAt": "Mon, 15 Jun 2026 04:14:12 GMT",
+      "topic": "product_signal",
+      "needsReview": false,
+      "reviewNote": null
+    },
+    {
+      "id": "https://x.com/realmadhuguru/status/2066935654500671499",
+      "source": "x",
+      "sourceName": "Madhu Guru",
+      "handle": "realmadhuguru",
+      "title": "The real prize in the SpaceX-Cursor deal is the agentic harness that will become the core...",
+      "url": "https://x.com/realmadhuguru/status/2066935654500671499",
+      "summary": "The real prize in the SpaceX-Cursor deal is the agentic harness that will become the core for automating all knowledge work at scale. Here’s what SpaceX is getting: 1. Production-grade agentic harness -planning, context...",
+      "score": 62,
+      "publishedAt": "2026-06-16T17:27:16.000Z",
+      "topic": "product_signal",
+      "needsReview": false,
+      "reviewNote": null
+    }
+  ]
 }
