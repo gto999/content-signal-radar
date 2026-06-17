@@ -60,9 +60,8 @@ jobs:
 
       - name: Prepare digest and deliver
         run: |
-          cd scripts
-          node prepare-digest.js > digest.txt 2>digest.err || cat digest.err
-          test -s digest.txt && node deliver.js --file digest.txt || echo "digest empty or delivery skipped"
+          node scripts/prepare-digest.js > digest.txt 2>digest.err || cat digest.err
+          test -s digest.txt && node scripts/deliver.js --file digest.txt || echo "digest empty or delivery skipped"
 
       - name: Commit and push feeds
         run: |
