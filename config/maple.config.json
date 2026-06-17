@@ -5,7 +5,10 @@
   "timezone": "Asia/Shanghai",
   "frequency": "daily",
   "deliveryTime": "09:00",
-  "delivery": { "method": "stdout" },
+  "delivery": {
+    "method": "telegram",
+    "chatId": "7610141589"
+  },
   "focusTopics": [
     "AI Agent",
     "AI 自动化 workflow",
