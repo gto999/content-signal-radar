@@ -1,6 +1,8 @@
 {
   "seenTweets": {},
-  "seenVideos": {},
+  "seenVideos": {
+    "4-sWFytOfRw": 1781744308200
+  },
   "seenArticles": {
     "https://www.anthropic.com/engineering/how-we-contain-claude": 1781258972000,
     "https://www.anthropic.com/engineering/april-23-postmortem": 1781258977782,

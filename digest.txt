@@ -1,10 +1,10 @@
 # 📡 Content Signal Radar
 
-> 2026/6/17 19:19:49 · 9 条高信号 · 31 条原始推文
+> 2026/6/18 08:58:31 · 7 条高信号 · 31 条原始推文
 
 ## 今日判断
 
-Agent 话题今天密度最高，@zarazhangrui 的观点值得展开——评价 agent 的框架正在从"能做什么"转向"能不能持续超出预期"。📦 产品 方向也有 3 条相关信号。这个方向还在加速，连续两天出现同类信号就值得写成帖子。
+Agent 话题今天密度最高，@zarazhangrui 的观点值得展开——评价 agent 的框架正在从"能做什么"转向"能不能持续超出预期"。📦 产品 方向也有 2 条相关信号。这个方向还在加速，连续两天出现同类信号就值得写成帖子。
 
 ---
 
@@ -24,12 +24,12 @@ Agent 话题今天密度最高，@zarazhangrui 的观点值得展开——评价
 
 [→ 原文](https://x.com/rauchg/status/2067106499449565265)
 
-### 3. 🇧🇷World-changing AI companies are coming from Brazil. That’s why we’ve officially expan...
-[@joshwoodward](https://x.com/joshwoodward/status/2067025851829330076) · `📦 产品` · ♥ 351 · 🔁 32 · 💬 23
+### 3. 发布了: Anthropic 叫停了关于 Agent SDK 六月以后不能使用 Claude 订阅额度的这个改动 就是说你还是可以在类似 CodePilot 这种基于 Agent SDK 开发的其他 Claud...
+[@歸藏](https://m.okjike.com/originalPosts/6a30bb5b8694679c362225b2) · `🤖 Agent`
 
-高互动信号，关键词未命中但互动强 — 按互动判断保留
+不再是"能做什么"的问题，而是"能不能持续超出预期"——评价框架在变。 → 可写性高，优先扩成帖子
 
-[→ 原文](https://x.com/joshwoodward/status/2067025851829330076)
+[→ 原文](https://m.okjike.com/originalPosts/6a30bb5b8694679c362225b2)
 
 ### 4. You don’t have to chase the cool thing. Do whatever you’re already doing so well that it ...
 [@zarazhangrui](https://x.com/zarazhangrui/status/2066994434953421226) · `📌 综合` · ♥ 162 · 🔁 17 · 💬 32
@@ -38,12 +38,12 @@ Agent 话题今天密度最高，@zarazhangrui 的观点值得展开——评价
 
 [→ 原文](https://x.com/zarazhangrui/status/2066994434953421226)
 
-### 5. 发布了: Anthropic 叫停了关于 Agent SDK 六月以后不能使用 Claude 订阅额度的这个改动 就是说你还是可以在类似 CodePilot 这种基于 Agent SDK 开发的其他 Claud...
-[@歸藏](https://m.okjike.com/originalPosts/6a30bb5b8694679c362225b2) · `🤖 Agent`
+### 5. 🇧🇷World-changing AI companies are coming from Brazil. That’s why we’ve officially expan...
+[@joshwoodward](https://x.com/joshwoodward/status/2067025851829330076) · `📦 产品` · ♥ 351 · 🔁 32 · 💬 23
 
-不再是"能做什么"的问题，而是"能不能持续超出预期"——评价框架在变。 → 可写性高，优先扩成帖子
+高互动信号，关键词未命中但互动强 — 按互动判断保留
 
-[→ 原文](https://m.okjike.com/originalPosts/6a30bb5b8694679c362225b2)
+[→ 原文](https://x.com/joshwoodward/status/2067025851829330076)
 
 ### 6. 发布了: 1. 模型很喜欢说「想象一下」 2. 现在很多Agent都支持多模态能力 可以加一条规则： 「每当你输出“想象一下”时，直接生成配图，并在图中标注信息，方便...
 [@李继刚](https://m.okjike.com/originalPosts/6a2f7c14aa39df5104cb7fae) · `🤖 Agent`
@@ -58,20 +58,6 @@ Agent 话题今天密度最高，@zarazhangrui 的观点值得展开——评价
 不再是"能做什么"的问题，而是"能不能持续超出预期"——评价框架在变。 → 可写性高，优先扩成帖子
 
 [→ 原文](https://x.com/realmadhuguru/status/2066935654500671499)
-
-### 8. Which leads to… Bowen’s differentiation of self Low differentiation = highly reactive to ...
-[@garrytan](https://x.com/garrytan/status/2067100549775032702) · `📦 产品` · ♥ 17
-
-这条暴露了一个产品判断的转折点，值得对照自己的项目想一遍。
-
-[→ 原文](https://x.com/garrytan/status/2067100549775032702)
-
-### 9. Quick one to set the stage: ☑️ 30 minute function invocations 🆕 24 hour sandbox lifetime...
-[@rauchg](https://x.com/rauchg/status/2067137678772937000) · `📌 综合` · ♥ 81 · 🔁 3 · 💬 7
-
-权重源新帖，互动偏低但值得关注
-
-[→ 原文](https://x.com/rauchg/status/2067137678772937000)
 
 ---
 
@@ -97,30 +83,32 @@ https://x.com/rauchg/status/2067106499449565265
 
 ### 草稿 3
 
-产品好坏越来越不取决于功能多少，而取决于判断对不对。
+评价 agent 产品的标准变了。
 
-@joshwoodward 的信号暴露了一个转折点——值得停下来想一遍。
+不看功能清单了——看一件事：它有没有做出过你没预料到的结果。
 
-https://x.com/joshwoodward/status/2067025851829330076
+@歸藏 的判断指向一个更大的变化：产品评价从"完整性"转向"惊喜密度"。做内容也一样——读者记住的是超出预期的判断，不是信息搬运。
+
+https://m.okjike.com/originalPosts/6a30bb5b8694679c362225b2
 
 ---
 
 ## 下一步
 
 - **写帖优先**：@zarazhangrui 的「Every other product right now is "an AI...」可写性最高，建议明早扩成 X 长帖
-- **追踪主题**：🤖 Agent(4条)、📦 产品(3条) 今天重复出现，加入持续观察列表
+- **追踪主题**：🤖 Agent(4条)、📦 产品(2条) 今天重复出现，加入持续观察列表
 - **源覆盖**：今天缺少 博客、播客 来源的高信号，考虑扩充对应信号源
 
 ---
 
 ## 平台健康摘要
 
-- X: 26 raw / 26 post-seen / 7 high-signal (demoted -3)
+- X: 26 raw / 26 post-seen / 5 high-signal (demoted -5)
 - 即刻: 10 raw / 10 post-seen / 2 high-signal
 - Blogs: 1 raw / 1 post-seen / 0 high-signal
 - Podcasts: 1 raw / 1 post-seen / 0 high-signal
 
 ---
 
-<sub>40 builders · 31 tweets · 1 blogs · 1 podcasts · 9 high-signal · 3 filtered · balanced mode</sub>
+<sub>40 builders · 31 tweets · 1 blogs · 1 podcasts · 7 high-signal · 3 filtered · balanced mode</sub>
 
