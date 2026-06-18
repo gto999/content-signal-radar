@@ -97,7 +97,7 @@ function mdToTelegramHtml(md) {
       out.push(`<b>▸ ${escapeHtml(m[1])}</b>`);
       continue;
     }
-    if ((m = processed.match(/^##\s+(.*)$/)) {
+    if ((m = processed.match(/^##\s+(.*)$/))) {
       closeList();
       closeBlockquote();
       out.push('');
@@ -112,7 +112,7 @@ function mdToTelegramHtml(md) {
     }
 
     // 引用 > xxx → <blockquote>
-    if ((m = processed.match(/^>\s?(.*)$/)) {
+    if ((m = processed.match(/^>\s?(.*)$/))) {
       closeList();
       if (!inBlockquote) { out.push('<blockquote>'); inBlockquote = true; }
       out.push(escapeHtml(m[1]));
